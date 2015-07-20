@@ -6,7 +6,6 @@ test -f ~/.git-completion.bash && . $_
 
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad;
-BOLD_GREEN="\[\e[1;32m\]"
 PS1='\[\e[1;32m\]\u\[\e[0;32m\]@\h: \[\e[0;33m\]\w \[\e[1;33m\]\$ \[\e[0m\]'
 export SUDO_PS1='\[\e[1;31m\]\u\[\e[0;31m\]@\h: \[\e[0;33m\]\w \[\e[1;33m\]\$ \[\e[0m\]'
 
