@@ -1,11 +1,16 @@
 ##############################################################################################
+# Vim is the default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+##############################################################################################
 # virtualenvwrapper startup
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
 ##############################################################################################
-# test if .git-completion.bash exists, iff  it does, read and execute .git-completion.bash (@crawfishpress)
+# Test if .git-completion.bash exists, iff  it does, read and execute .git-completion.bash (@crawfishpress)
 test -f ~/.git-completion.bash && . $_
 
 ##############################################################################################

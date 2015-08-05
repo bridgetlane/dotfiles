@@ -1,0 +1,27 @@
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[user]
+	name = Bridget Lane
+	email = bnlane@gannett.com
+[alias]
+        st = status
+        co = checkout
+        ci = commit
+        br = branch
+        glog = log --graph --decorate --oneline --all
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        interactive = auto
+[push]
+        default = matching
+[core]
+	excludesfile = /Users/bnlane/.gitignore_global
+	whitespace = trailing-space,space-before-tab,indent-with-non-tab
+	autocrlf = input
+	editor = vim
+[commit]
+	template = /Users/bnlane/.gitmessage.txt
