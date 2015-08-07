@@ -28,6 +28,9 @@ export SUDO_PS1='\[\e[1;31m\]\u\[\e[0;31m\]@\h: \[\e[0;33m\]\w \[\e[1;33m\]\$ \[
 alias vi="vim"
 alias openmason="ssh blane3@mason.gmu.edu"
 alias openzeus="ssh blane3@zeus.ite.gmu.edu"
+alias cb="cd ~/chef-repo/cookbooks"
+alias db="cd ~/chef-repo/data_bags"
+alias ro="cd ~/chef-repo/roles"
 
 ##############################################################################################
 # Notification system for Kitchen on Apple devices (adaption of original script by @kbvincent)
