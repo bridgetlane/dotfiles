@@ -1,0 +1,3 @@
+[submodule "zsh/fonts"]
+	path = zsh/fonts
+	url = git@github.com:powerline/fonts.git

@@ -1,0 +1,17 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/LAZY.tmTheme",
+	"font_size": 13.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+    "spell_check": true,
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "bold_folder_labels": true,
+    "remember_open_files": true,
+    "close_windows_when_empty": false,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true
+}

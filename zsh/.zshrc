@@ -5,6 +5,10 @@ export ZSH=/Users/bnlane/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#
+# TO get this theme up and working for MacOSX on iTerm2, install Powerline fonts and set Non-ASCII font to 14pt Source Code Pro for Powerline and leave anti-aliased selected
+# I use 14pt Monaco for my regular font with anti-aliased un-selected
+# I use the darkside color scheme for iTerm2
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
