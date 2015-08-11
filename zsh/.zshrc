@@ -11,6 +11,9 @@ export ZSH=/Users/bnlane/.oh-my-zsh
 # I use the darkside color scheme for iTerm2
 ZSH_THEME="agnoster"
 
+# Hides bnlane@GCI-BNLANE
+DEFAULT_USER="bnlane"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
