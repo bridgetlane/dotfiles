@@ -7,4 +7,5 @@ alias cb="cd ~/chef-repo/cookbooks"
 alias db="cd ~/chef-repo/data_bags"
 alias ro="cd ~/chef-repo/roles"
 alias nyan="nc -v nyancat.dakko.us 23" # via oh-my-zsh nyan plugin
+alias pep8l="pep8 --ignore=E501"
 

@@ -1,0 +1,19 @@
+{
+    // personal jshint file for javascript style consistency
+
+    "curly": true,          // surround all code blocks with curly braces
+    "camelcase": true,      // identifiers must be in camelCase
+    "eqeqeq": true,         // no ==, !=, only === and !== allowed
+    "undef": true,          // require all non-global vars to be declared
+    "bitwise": true,        // prohibit bitwise operators (&, |, ^, etc.)
+    "indent": 4,            // use 4 spaces for indentation
+    "forin": true,          // require filtering for..in loops with obj.hasOwnProperty()
+    "newcap": false,        // require capitalization of all constructor functions e.g. `new F()`
+    "noempty": true,        // prohibit use of empty blocks
+    "nonbsp": true,         // prohibit "non-breaking whitespace" characters.
+    "globalstrict": true,   // allow global "use strict" (also enables 'strict')
+    "shadow": true,         // allows re-define variables later in code e.g. `var x=1; x=2;`
+
+    "globals": { }          // predefined global variables
+}
+
