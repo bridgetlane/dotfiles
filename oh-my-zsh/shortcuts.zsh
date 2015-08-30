@@ -8,4 +8,6 @@ alias db="cd ~/chef-repo/data_bags"
 alias ro="cd ~/chef-repo/roles"
 alias nyan="nc -v nyancat.dakko.us 23" # via oh-my-zsh nyan plugin
 alias pep8l="pep8 --ignore=E501"
-
+alias gss="git status --short --branch"
+alias cc="colorize"
+alias ucr="ls | xargs -I{} sh -c 'cd {} && echo {} && git checkout master && git fetch -p && git pull'" # update cookbooks in chef-repo
