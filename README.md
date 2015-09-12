@@ -24,5 +24,5 @@ A backup of any previously existing dotfiles will be created in the folder .old_
 ### install notes
 - iterm is the [darkside](http://iterm2colorschemes.com/) theme
 - set iterm non-ASCII font to 14pt source code pro for powerline with anti-aliased selected
-- set iterm regular font to 14pt monaco with anti-aliased un-selected
+- set iterm regular font to 14pt monaco with anti-aliased selected
 

@@ -1,1 +1,1 @@
-Ticket-Number Description (What branch are you on?) (Wait for build, delete branch)
+Ticket-Number Description (What branch are you on?) (Bump version number, changelog) (Wait for build, delete branch)
