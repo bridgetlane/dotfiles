@@ -1,6 +1,8 @@
 # dotfiles
 These dotfiles are a personal backup of my system, made with :heart:
 
+![my terminal](http://i.imgur.com/DCIOQos.jpg)
+
 ## dependencies
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - [powerline font - source code pro](https://github.com/powerline/fonts)
