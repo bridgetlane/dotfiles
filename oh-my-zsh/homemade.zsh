@@ -30,12 +30,3 @@ vn() {
 }
 eval "$(chef shell-init bash)"
 
-##############################################################################################
-# ls a directory in your current directory
-lsr() {
-    if [ $# -eq 0 ]; then
-        echo "Please give an argument"
-    else
-        cd $1 && ls -a && cd ..
-    fi
-}
