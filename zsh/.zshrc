@@ -75,3 +75,4 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+export PATH=$PATH:~/packer
