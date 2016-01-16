@@ -12,7 +12,7 @@ kit() {
         fi
     fi
 }
-eval "$(chef shell-init bash)"
+eval "$(chef shell-init zsh)"
 
 ##############################################################################################
 # Notification system for Vagrant on Apple devices
@@ -28,5 +28,5 @@ vn() {
         fi
     fi
 }
-eval "$(chef shell-init bash)"
+eval "$(chef shell-init zsh)"
 
