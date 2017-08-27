@@ -5,19 +5,20 @@
 [user]
 	name = Bridget Lane
 	email = bnlane@gannett.com
+	signingkey = bnlane@gannett.com
 [alias]
-        st = status
-        co = checkout
-        ci = commit
-        br = branch
-        glog = log --graph --decorate --oneline --all
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	glog = log --graph --decorate --oneline --all
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 [push]
-        default = matching
+	default = simple
 [core]
 	excludesfile = /Users/bnlane/.gitignore_global
 	whitespace = trailing-space,space-before-tab,indent-with-non-tab
@@ -25,11 +26,16 @@
 	editor = vim
 [commit]
 	template = /Users/bnlane/.gitmessage.txt
+	gpgsign = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[gpg]
+	program = /usr/local/bin/gpg

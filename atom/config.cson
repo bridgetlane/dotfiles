@@ -1,0 +1,24 @@
+"*":
+  core:
+    disabledPackages: [
+      "vim-mode"
+    ]
+    openEmptyEditorOnStart: false
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontSize: 13
+    softWrap: true
+  "go-plus":
+    currentPanelHeight: "11.899641577060931vh"
+    test:
+      coverageHighlightMode: "disabled"
+  linter:
+    errorPanelHeight: 73
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false

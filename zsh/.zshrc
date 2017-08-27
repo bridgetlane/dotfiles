@@ -1,78 +1,60 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/bnlane/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#
-# TO get this theme up and working for MacOSX on iTerm2, install Powerline fonts and set Non-ASCII font to 14pt Source Code Pro for Powerline and leave anti-aliased selected
-# I use 14pt Monaco for my regular font with anti-aliased un-selected
-# I use the darkside color scheme for iTerm2
-ZSH_THEME="agnoster"
-
-# Hides bnlane@GCI-BNLANE
+# If you set this to "random", it'll load a random theme each time.
+ZSH_THEME="robbyrussell"
 DEFAULT_USER="bnlane"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git \
          virtualenv \
          virtualenvwrapper \
-         sublime  \
          zsh-syntax-highlighting \
          colorize)
 
-autoload -U compinit && compinit # for zsh-completions plugin
+# For the zdh-completions plugin.
+autoload -U compinit && compinit
 
-# User configuration
-
-export PATH="/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-if [ -d "$HOME/.local/bin" ]; then
-        PATH="$HOME/.local/bin:$PATH"
-fi
-
+# Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# User configuration.
+export PATH="/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Preferred editor for local and remote sessions
+if [ -d $HOME/.local/bin ]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Preferred editor for local and remote sessions.
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='vim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 export PATH=$PATH:~/packer
+export GOPATH=$HOME/golang
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# PATH for the Google Cloud SDK.
+if [ -f /Users/bnlane/google-cloud-sdk/path.zsh.inc ]; then source /Users/bnlane/google-cloud-sdk/path.zsh.inc; fi
+
+# gcloud command completion.
+if [ -f /Users/bnlane/google-cloud-sdk/completion.zsh.inc ]; then source /Users/bnlane/google-cloud-sdk/completion.zsh.inc; fi
+
+# Source secrets.
+if [ -f $HOME/secrets.sh ]; then source $HOME/secrets.sh; fi
+
+# Get git-completion script.
+if [ ! -d $HOME/git ]; then
+git clone git@github.com:git/git.git; fi
+
+chmod 700 $HOME/git/contrib/completion/git-completion.zsh
+
+if [ -f $HOME/git/contrib/completion/git-completion.zsh ]; then zstyle ':completion:*:*:git:*' script $HOME/git/contrib/completion/git-completion.zsh; fi
+
+export FONTCONFIG_PATH=/etc/fonts
+export FONTCONFIG_PATH=/etc/fonts
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
