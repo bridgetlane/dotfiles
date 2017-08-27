@@ -8,15 +8,15 @@
 	signingkey = bnlane@gannett.com
 [alias]
 	st = status
-  co = checkout
-  ci = commit
-  br = branch
-  glog = log --graph --decorate --oneline --all
+	co = checkout
+	ci = commit
+	br = branch
+	glog = log --graph --decorate --oneline --all
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 [push]
 	default = simple
 [core]
