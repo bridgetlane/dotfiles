@@ -1,5 +1,4 @@
-##############################################################################################
-# Notification system for Kitchen on Apple devices (adaption of original script by @kbvincent)
+# Kitchen shortcut
 kit() {
     if [ $# -eq 0 ]; then
         echo "No arguments supplied"
@@ -14,8 +13,7 @@ kit() {
 }
 eval "$(chef shell-init zsh)"
 
-##############################################################################################
-# Notification system for Vagrant on Apple devices
+# Vagrant shortcut
 vn() {
     if [ $# -eq 0 ]; then
         echo "No arguments supplied"
@@ -29,4 +27,3 @@ vn() {
     fi
 }
 eval "$(chef shell-init zsh)"
-

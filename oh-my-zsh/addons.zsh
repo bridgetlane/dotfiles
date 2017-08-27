@@ -1,5 +1,3 @@
-##############################################################################################
-# Vim is the default editor
+# Vim as defualt.
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
