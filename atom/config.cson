@@ -12,8 +12,6 @@
   editor:
     fontSize: 13
     softWrap: true
-  "exception-reporting":
-    userId: "e4e10d37-f69a-15ce-f65c-098745c9f4fd"
   "go-plus":
     currentPanelHeight: "11.899641577060931vh"
     test:
