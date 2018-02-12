@@ -26,8 +26,6 @@ export SUDO_PS1='\[\e[1;31m\]\u\[\e[0;31m\]@\h: \[\e[0;33m\]\w \[\e[1;33m\]\$ \[
 ##############################################################################################
 # Aliases
 alias vi="vim"
-alias openmason="ssh blane3@mason.gmu.edu"
-alias openzeus="ssh blane3@zeus.ite.gmu.edu"
 alias cb="cd ~/chef-repo/cookbooks"
 alias db="cd ~/chef-repo/data_bags"
 alias ro="cd ~/chef-repo/roles"
@@ -49,3 +47,5 @@ kit() {
 eval "$(chef shell-init bash)"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

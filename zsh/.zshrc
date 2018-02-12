@@ -18,8 +18,10 @@ autoload -U compinit && compinit
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+export GOPATH=$HOME/golang
+
 # User configuration.
-export PATH="/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
 
 if [ -d $HOME/.local/bin ]; then
   PATH="$HOME/.local/bin:$PATH"
@@ -33,10 +35,10 @@ else
 fi
 
 export PATH=$PATH:~/packer
-export GOPATH=$HOME/golang
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/bin/consul
 
 # PATH for the Google Cloud SDK.
 if [ -f /Users/bnlane/google-cloud-sdk/path.zsh.inc ]; then source /Users/bnlane/google-cloud-sdk/path.zsh.inc; fi
@@ -58,3 +60,10 @@ if [ -f $HOME/git/contrib/completion/git-completion.zsh ]; then zstyle ':complet
 export FONTCONFIG_PATH=/etc/fonts
 export FONTCONFIG_PATH=/etc/fonts
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export VAULT_ADDR=https://vault.service.us-east-1.gciconsul.com:8200
+
+alias godoc='echo Go doc available at "http://localhost:6060/pkg/" add ?m=all to include unexported docs; godoc -http :6060 -notes "TODO"'
