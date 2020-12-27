@@ -2,26 +2,25 @@
 export ZSH=/Users/bnlane/.oh-my-zsh
 
 # If you set this to "random", it'll load a random theme each time.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="avit"
 DEFAULT_USER="bnlane"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=(git \
-         virtualenv \
-         virtualenvwrapper \
-         zsh-syntax-highlighting \
-         colorize)
+plugins=(git
+        zsh-syntax-highlighting
+        colorize)
 
 # For the zdh-completions plugin.
-autoload -U compinit && compinit
+autoload -U compinit && compinit -i
 
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/golang
 
 # User configuration.
-export PATH=$PATH:/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin
+export PATH=$PATH:/opt/chefdk/bin:/Users/bnlane/.chefdk/gem/ruby/2.1.0/bin:/opt/chefdk/embedded/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$GOPATH/bin:$GOROOT/bin
 
 if [ -d $HOME/.local/bin ]; then
   PATH="$HOME/.local/bin:$PATH"
@@ -35,10 +34,9 @@ else
 fi
 
 export PATH=$PATH:~/packer
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$PATH:/usr/local/bin/consul
+export PATH=$PATH:/Users/bnlane/google-cloud/sdk/
+export PATH=$PATH:/Users/bnlane/protoc
 
 # PATH for the Google Cloud SDK.
 if [ -f /Users/bnlane/google-cloud-sdk/path.zsh.inc ]; then source /Users/bnlane/google-cloud-sdk/path.zsh.inc; fi
@@ -64,6 +62,18 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export VAULT_ADDR=https://vault.service.us-east-1.gciconsul.com:8200
+export GPG_TTY=$(tty)
 
-alias godoc='echo Go doc available at "http://localhost:6060/pkg/" add ?m=all to include unexported docs; godoc -http :6060 -notes "TODO"'
+source /Users/bnlane/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bnlane/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bnlane/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bnlane/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bnlane/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export PATH="$HOME/composer.phar/composer/vendor/bin:$PATH"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/Users/bnlane/golang/src/github.com/GannettDigital/jstransform:$PATH"
+export PATH="$PATH:/usr/local/go"
+export GO111MODULE=on
