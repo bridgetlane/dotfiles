@@ -5,7 +5,6 @@
 [user]
 	name = Bridget Lane
 	email = bnlane@gannett.com
-	signingkey = bnlane@gannett.com
 [alias]
 	st = status
 	co = checkout
@@ -26,7 +25,6 @@
 	editor = vim
 [commit]
 	template = /Users/bnlane/.gitmessage.txt
-	gpgsign = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -38,4 +36,4 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg1
